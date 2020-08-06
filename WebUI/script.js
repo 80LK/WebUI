@@ -353,8 +353,8 @@ class Popup{
 		this._el = id;
 		this._el.classList.add("popup");
 
-		if(options.flat)
-			this._el.classList.add("flat");
+		if(options.classes)
+			this._el.classList.add(...options.classes);
 
 		Popup.__popupsContainer.appendChild(this._el);
 
