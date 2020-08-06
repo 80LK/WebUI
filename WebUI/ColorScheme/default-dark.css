@@ -1,0 +1,23 @@
+/*
+* Additional Dark color scheme
+*/
+
+:root{
+	--text:white;
+	--background:#222;
+
+	--input: #ccc;
+	--input-background:#222;
+	--input-focus-background:#444;
+
+	--selector-categoty-background: #333;
+	--selector-categoty-text: #999;
+
+	--progress-bar-background:#444;
+
+	--popup-shadow:#000a;
+
+	--popup-border:#888;
+	--popup-footer-text: #ccc; 
+	--popup-footer-background: #555;
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<head>
+	<title>WebUI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="FontAwesome/css/all.css">
+
+	<!-- <link rel="stylesheet" type="text/css" href="WebUI/ColorScheme/cold.css"> -->
+	<link rel="stylesheet" type="text/css" href="WebUI/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+
+	<script type="text/javascript" src="WebUI/script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+<body class="loading">
+	<div id="preloader">
+		<div class="cubics">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	
+	<header>
+		<label class='theme-switcher'>
+			<i class="fas fa-sun"></i>
+			<input id="dark-switcher" class="switch" type="checkbox">
+			<i class="far fa-moon"></i>
+		</label>
+
+		<div id="ThemeSelector"></div>
+		<script type="text/javascript">
+			new Selector("ThemeSelector", {
+				selected:["default", "cold"].indexOf(ColorScheme.scheme),
+				items:[
+					{title:"Default", value:"default"},
+					{title:"Cold", value:"cold"},
+				],
+				onchange:function(){
+					ColorScheme.setScheme(this.value);
+				}
+			});
+		</script>
+	</header>
+
+	<main class="container">
+		
+
+		<!-- Typography -->
+		<div>
+			<h2 class="muted">Typography</h2>
+			<div class='row'>
+				<div class="col-4">
+					<h1>Header 1</h1>
+					<h2>Header 2</h2>
+					<h3>Header 3</h3>
+					<h4>Header 4</h4>
+					<h5>Header 5</h5>
+					<h6>Header 6</h6>
+				</div>
+				<div class="col-4">
+					<p class="small"><span class="upper">Small text:</span> Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing</a> elit. Aenean commodo ligula eget dolor. Aenean massa <a class="external" href="#">external link</a>. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+					<p><span class="upper">Normal text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+					<p class="large"><span class="upper">Large text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				</div>
+				<div class="col-4">
+					<ul class="list">
+						<li>Lorem ipsum dolor
+						<li>Lorem ipsum dolor
+						<li>Lorem ipsum dolor
+							<ul class="list">
+								<li>Lorem ipsum dolor</li>
+							</ul>
+						</li>
+					</ul>
+
+					<ol>
+						<li>Lorem ipsum dolor
+						<li>Lorem ipsum dolor
+						<li>Lorem ipsum dolor
+					</ol>
+
+					<p class="upper"><span class="upper">Upper text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+					<p class="lower"><span class="upper">Lower text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<ul class="unlist">
+						<li class="muted"><span class="bold">Muted text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li class="primary"><span class="bold">Primary text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li class="secondary"><span class="bold">Secondary text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li class="success"><span class="bold">Success text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li class="info"><span class="bold">Info text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li class="warning"><span class="bold">Warning text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li class="danger"><span class="bold">Danger text:</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					</ul>
+				</div>
+				<div class="col-6">
+					<p><span class="bg-primary">Primary background</span> amet, sequi amet obcaecati quos soluta rerum repellendus <span class="bg-secondary">secondary background</span> consectetur adipisicing veniam elit. <span class="bg-success">Success background</span> non,sequi amet obcaecati quos soluta quisquam harum dolor ab veniam molestias <span class="bg-info">info background</span>. Lorem ipsum dolor excepturi ut vitae <span class="bg-warning">warning background</span> rerum repellendus aut quaerat deleniti recusandae. Quas nam quod dolorem, <span class="bg-danger">danger background</span>, saepe, expedita necessitatibus reprehenderit, ratione modi a quis magnam. Sint vero fuga totam repellendus quae!</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Quotation -->
+		<div class="center">
+			<h2 class="muted">Quotation</h2>
+			<blockquote style="max-width: 650px">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<cite>WolfTeam</cite>
+			</blockquote>
+		</div>
+		
+		<!-- Buttons -->
+		<div>
+			<h2 class="muted">Buttons</h2>
+			<div class="mb-2">
+				<a class="btn large">Default button</a>
+				<button class="btn large btn-secondary dark-wave">Secondary button</button>
+				<button class="btn large btn-success">Success button</button>
+				<button class="btn large btn-info">Info button</button>
+				<button class="btn large btn-warning">Warning button</button>
+				<button class="btn large btn-danger">Danger button</button>
+			</div>
+			<div class="mb-4">
+				<a class="btn">Default button</a>
+				<button class="btn btn-secondary dark-wave">Secondary button</button>
+				<button class="btn btn-success">Success button</button>
+				<button class="btn btn-info">Info button</button>
+				<button class="btn btn-warning">Warning button</button>
+				<button class="btn btn-danger">Danger button</button>
+			</div>
+
+			<h2 class="muted">Flat buttons</h2>
+			<div class="mb-2">
+				<a class="btn large flat">Default button</a>
+				<button class="btn large flat btn-secondary dark-wave">Secondary button</button>
+				<button class="btn large flat btn-success">Success button</button>
+				<button class="btn large flat btn-info">Info button</button>
+				<button class="btn large flat btn-warning">Warning button</button>
+				<button class="btn large flat btn-danger">Danger button</button>
+			</div>
+			<div class="mb-4">
+				<a class="btn flat">Default button</a>
+				<button class="btn btn-secondary flat">Secondary button</button>
+				<button class="btn btn-success flat">Success button</button>
+				<button class="btn btn-info flat">Info button</button>
+				<button class="btn btn-warning flat">Warning button</button>
+				<button class="btn btn-danger flat">Danger button</button>
+			</div>
+
+			<h2 class="muted">Ghost buttons</h2>
+			<div class="mb-2">
+				<a class="btn large flat ghost">Default button</a>
+				<button class="btn large flat ghost btn-secondary dark-wave">Secondary button</button>
+				<button class="btn large flat ghost btn-success">Success button</button>
+				<button class="btn large flat ghost btn-info">Info button</button>
+				<button class="btn large flat ghost btn-warning">Warning button</button>
+				<button class="btn large flat ghost btn-danger">Danger button</button>
+			</div>
+			<div class="mb-4">
+				<a class="btn flat ghost">Default button</a>
+				<button class="btn btn-secondary flat ghost">Secondary button</button>
+				<button class="btn btn-success flat ghost">Success button</button>
+				<button class="btn btn-info flat ghost">Info button</button>
+				<button class="btn btn-warning flat ghost">Warning button</button>
+				<button class="btn btn-danger flat ghost">Danger button</button>
+			</div>
+
+			<h2 class="muted">Group buttons</h2>
+			<div class="mb-2">
+				<div class="btn-group">
+					<button class="btn">Button Left</button>
+					<button class="btn">Button Center</button>
+					<button class="btn">Button Right</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-secondary">Button Left</button>
+					<button class="btn btn-secondary">Button Center</button>
+					<button class="btn btn-secondary">Button Right</button>
+				</div>
+			</div>
+			<div class="mb-4">
+				<div class="btn-group">
+					<button class="btn flat btn-success">Button Left</button>
+					<button class="btn flat btn-info">Button Center</button>
+					<button class="btn flat btn-danger">Button Right</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn ghost btn-success">Button Left</button>
+					<button class="btn ghost btn-info">Button Center</button>
+					<button class="btn ghost btn-danger">Button Right</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Forms -->
+		<div>
+			<h2 class="muted">Forms</h2>
+			<div class="row">
+				<div class='col-4'>
+					<input placeholder="Text field" class="field large">
+					<input placeholder="Text field" class="field">
+				</div>
+
+				<div class='col-4'>
+					<input placeholder="Success field" class="field success large">
+					<input placeholder="Success field" class="field success">
+				</div>
+
+				<div class='col-4'>
+					<input placeholder="Danger field" class="field danger large">
+					<input placeholder="Danger field" class="field danger">
+				</div>
+
+				<div class='col-12'>
+					<textarea placeholder="Textarea" class="field"></textarea>
+				</div>
+			</div>
+			<div class="row mb-4">
+				<div class="col-4">
+					<h3 class="muted">Switch</h3>
+					<label>Switch off <input class="switch" type="checkbox" checked> Switch on</label>
+					<label>Switch off <input class="switch" type="checkbox"> Switch on</label>
+					<label>Switch off <input class="switch onoff" type="checkbox" checked> Switch on</label>
+					<label>Switch off <input class="switch onoff" type="checkbox"> Switch on</label>
+					<label class="disabled">Switch off <input class="switch" type="checkbox" disabled checked> Switch on</label>
+					<label class="disabled">Switch off <input class="switch" type="checkbox" disabled> Switch on</label>
+				</div>
+				<div class="col-4">
+					<h3 class="muted">Checkboxes Stack</h3>
+					<label><input type="checkbox" checked> CheckBox 1</label>
+					<label><input type="checkbox"> CheckBox 2</label>
+					<label class="disabled"><input type="checkbox" disabled checked> CheckBox 3</label>
+					<label class="disabled"><input type="checkbox" disabled> CheckBox 4</label>
+				</div>
+				<div class="col-4">
+					<h3 class="muted">Radios Stack</h3>
+					<label><input type="radio" name="radio-stack" checked> Radio 1</label>
+					<label><input type="radio" name="radio-stack"> Radio 2</label>
+					<label class="disabled"><input type="radio" name="dis-radio-stack" disabled checked> Radio 3</label>
+					<label class="disabled"><input type="radio" name="dis-radio-stack" disabled> Radio 4</label>
+				</div>
+			</div>
+			<div class="row mb-4">
+				<div class="col-6">
+					<h3 class="muted">Inline Checkboxes</h3>
+					<label class="inline"><input type="checkbox" checked> CheckBox 1</label>
+					<label class="inline"><input type="checkbox"> CheckBox 2</label>
+					<label class="inline disabled"><input type="checkbox" disabled checked> CheckBox 3</label>
+					<label class="inline disabled"><input type="checkbox" disabled> CheckBox 4</label>
+				</div>
+				<div class="col-6">
+					<h3 class="muted">Inline Radios</h3>
+					<label class="inline"><input type="radio" name="inline-radio" checked> Radio 1</label>
+					<label class="inline"><input type="radio" name="inline-radio"> Radio 2</label>
+					<label class="inline disabled"><input type="radio" name="dis-inline-radio" disabled checked> Radio 3</label>
+					<label class="inline disabled"><input type="radio" name="dis-inline-radio" disabled> Radio 4</label>
+				</div>
+			</div>
+			<div class="row mb-4">
+				<div class="col-4">
+					<h4 class="muted">Selector</h4>
+					<div id="selector"></div>
+					<script type="text/javascript">
+						var selector = new Selector("selector", {
+							placeholder:"Select item...",
+							items:[
+								{title:"Item 1",value:1},
+								{title:"Item 2",value:2},
+								{title:"Item 3",value:3},
+								{title:"Item 4",value:4},
+							]
+						});
+					</script>
+				</div>
+				<div class="col-4">
+					<h4 class="muted">Multi-Selector</h4>
+					<div id="multi-selector"></div>
+					<span class="muted small">Hold SHIFT to select multiple items.</span>
+					<script type="text/javascript">
+						var multiselector = new Selector("multi-selector", {
+							placeholder:"Select items...",
+							multi:true,
+							items:[
+								{title:"Category"},
+								{title:"Item 1",value:1},
+								{title:"Item 2",value:2},
+								{title:"Item 3",value:3},
+								{title:"Item 4",value:4},
+							]
+						});
+					</script>
+				</div>
+				<div class="col-4">
+					<h4 class="muted">Disabled Selector</h4>
+					<div id="disabled-selector" disabled></div>
+					<script type="text/javascript">
+						var multiselector = new Selector("disabled-selector", {
+							selected:0,
+							items:[
+								{title:"Item 5",value:5},
+							]
+						});
+					</script>
+				</div>
+			</div>
+			<h3 class="muted">Group input</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="input-group">
+						<input placeholder="Field with icon" class="field large">
+						<i class="field large far fa-eye"></i>
+					</div>
+					<div class="input-group">
+						<input placeholder="Field with icon" class="field">
+						<i class="field far fa-eye"></i>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="input-group">
+						<i class="field large fas fa-key"></i>
+						<input placeholder="Field with icon" class="field large">
+						<i class="field large far fa-eye"></i>
+					</div>
+					<div class="input-group">
+						<i class="field fas fa-key"></i>
+						<input placeholder="Field with icon" class="field">
+						<i class="field far fa-eye"></i>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="input-group">
+						<i class="field large fas fa-list"></i>
+						<div class="large" id="large-selector-group"></div>
+						<script type="text/javascript">
+							new Selector("large-selector-group", {
+								placeholder:"Select item...",
+								items:[
+									{title:"Item 1",value:1},
+									{title:"Item 2",value:2},
+									{title:"Item 3",value:3},
+									{title:"Item 4",value:4},
+								]
+							});
+						</script>
+					</div>
+					<div class="input-group">
+						<i class="field fas fa-list"></i>
+						<div id="selector-group"></div>
+						<script type="text/javascript">
+							new Selector("selector-group", {
+								placeholder:"Select item...",
+								items:[
+									{title:"Item 1",value:1},
+									{title:"Item 2",value:2},
+									{title:"Item 3",value:3},
+									{title:"Item 4",value:4},
+								]
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Progress Bars -->
+		<div>
+			<h2 class="muted">Progress Bars</h2>
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="progress-bar">
+						<div class="progress-bar--label">
+							<div class="progress-bar--title">Default</div>
+							<div class="progress-bar--value">90%</div>
+						</div>
+
+						<div class="progress-bar--bar" style="width:90%"></div>
+					</div>
+
+					<div class="progress-bar success">
+						<div class="progress-bar--label">
+							<div class="progress-bar--title">Success</div>
+							<div class="progress-bar--value">65%</div>
+						</div>
+
+						<div class="progress-bar--bar" style="width: 65%"></div>
+					</div>
+
+					<div class="progress-bar danger">
+						<div class="progress-bar--label">
+							<div class="progress-bar--title">Danger</div>
+							<div class="progress-bar--value">25%</div>
+						</div>
+
+						<div class="progress-bar--bar" style="width: 25%"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					
+					<div class="progress-bar secondary" data-title="Secondary" data-value="39"></div>
+
+					<div id="progress-bar" class="info"></div>
+					<script type="text/javascript">
+						progress_bar = new ProgressBar("progress-bar", {
+							label:"Info",
+							value:48
+						});
+					</script>
+
+					<div class="progress-bar warning" id="warningProgressBar" data-title="Warning" data-value="87"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Badges -->
+		<div class="mb-4">
+			<h2 class="muted">Badges</h2>
+			<div>
+				<p>Lorem ipsum <span class="badge">Default</span> sit amet, consectetuer adipiscing <span class="badge bg-secondary">Secondary</span>. Aenean commodo <span class="badge bg-success">Success</span> eget dolor. Aenean <span class="badge bg-danger">Danger</span>. Cum sociis natoque penatibus et <span class="badge bg-info">Info</span> dis parturient montes, <span class="badge bg-warning">Warning</span> ridiculus mus.</p>
+			</div>
+		</div>
+
+		<!-- Tooltips -->
+		<div class="mb-4">
+			<h2 class="muted">Tooltips</h2>
+			<div>
+				<button class="btn" title="Tooltip on top">Tooltip on top</button>
+				<button class="btn" title="Tooltip on right" data-dir="right">Tooltip on right</button>
+				<button class="btn" title="Tooltip on bottom" data-dir="bottom">Tooltip on bottom</button>
+				<button class="btn" title="Tooltip on left" data-dir="left">Tooltip on left</button>
+			</div>
+		</div>
+
+		<!-- Dropdown -->
+		<div class="mb-4">
+			<h2 class="muted">Dropdown</h2>
+
+			<div class="dropdown">
+				<span class="dropdown--title">Dropdown</span>
+				<ul class="dropdown--list">
+					<li class="dropdown--item">Item1</li>
+					<li class="dropdown--item">Item2</li>
+					<li class="dropdown--separator"></li>
+					<li class="dropdown--item">Item3</li>
+				</ul>
+			</div>
+
+			<div class="dropdown">
+				<span class="btn flat dropdown--title">Button dropdown</span>
+				<ul class="dropdown--list">
+					<li class="dropdown--item">Item1</li>
+					<li class="dropdown--item">Item2</li>
+					<li class="dropdown--separator"></li>
+					<li class="dropdown--item">Item3</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Popups open buttons-->
+		<div>
+			<h2 class="muted">Popups</h2>
+			<div class="row">
+				<div class='col-12'>
+					<button class="btn flat" onclick="FlatPopup.open()">Flat Popup</button>
+					<button class="btn btn-secondary flat" onclick="DefaultPopup.open()">Default Popup</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Toasts -->
+		<div class="mb-4">
+			<h2 class="muted">Toasts</h2>
+			<div>
+				<button class="btn flat ghost" onclick="Toast.default('I\'m Toast!');">Toast</button>
+				<button class="btn flat ghost btn-secondary" onclick="Toast.secondary('I\'m Toast!');">Toast</button>
+				<button class="btn flat ghost btn-success" onclick="Toast.success('I\'m Toast!');">Toast</button>
+				<button class="btn flat ghost btn-info" onclick="Toast.info('I\'m Toast!');">Toast</button>
+				<button class="btn flat ghost btn-warning" onclick="Toast.warning('I\'m Toast!');">Toast</button>
+				<button class="btn flat ghost btn-danger" onclick="Toast.danger('I\'m Toast!');">Toast</button>
+				<button class="btn flat ghost" onclick="
+					new Notification('Im new Notification!', {foot:'<button class=\'btn upper flat m-0\'>Ok</button>'})">Notification</button>
+			</div>
+		</div>
+	</main>
+
+	<footer style="height:150px; border-top: 1px solid black">
+	</footer>
+
+
+<!-- Popups -->
+<div id="FlatPopup">
+	<main> Content popup </main>
+	<footer>
+		<button class="btn flat" onclick="DefaultPopup.open()">Open Default</button>
+	</footer>
+</div>
+<div id="DefaultPopup" class="popup">
+	<header> Default Popup </header>
+	<main> Content popup </main>
+	<footer>
+		<button class="btn flat" onclick="FlatPopup.open()">Open Flat</button>
+	</footer>
+</div>
+<script type="text/javascript">
+	var FlatPopup = new Popup("FlatPopup", {
+		title:"Flat Popup",
+		flat:true
+	});
+</script>

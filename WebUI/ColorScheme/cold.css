@@ -1,0 +1,11 @@
+/*
+* Cold color scheme
+*/
+:root{
+	--general:#02B9DB; /* var(--general, #FF8100) */
+	--general-sub-3:#3DD1ED; /* var(--general-sub-3, #FFA040) */
+	--general-sub-4:#6CD9ED;
+
+	--secondary:#00E833; /* var(--secondary, #057D9F) */
+	--secondary-sub-3:#3DF465;
+}

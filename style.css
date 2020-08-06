@@ -1,0 +1,12 @@
+.theme-switcher{
+	font-size: 2em;
+}
+.theme-switcher .fa-sun{
+	color:#ffcf4a;
+}
+.theme-switcher .fa-moon{
+	color:#bbc0cb;
+}
+#ThemeSelector{
+	max-width: 250px;
+}
