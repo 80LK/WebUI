@@ -3,11 +3,9 @@
 */
 
 :root{
-	--text:white;
+	--text: #ccc;
 	--background:#222;
 
-	--input: #ccc;
-	--input-background:#222;
 	--input-focus-background:#444;
 
 	--selector-categoty-background: #333;
