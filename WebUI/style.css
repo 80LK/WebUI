@@ -135,8 +135,8 @@ blockquote p {
 	width: 100%;
 	height: 36px;
 
-	border: 1px solid var(--input-border, #444);
-	color:var(--input, #444);
+	border: 1px solid var(--input-border, var(--input, var(--text, #444)));
+	color:var(--input, var(--text, #444));
 	background: var(--input-background, transparent);
 
 	transition: border-color 0.3s ease, background 0.3s ease;
@@ -159,7 +159,7 @@ textarea.field{
 }
 
 .field.success{
-	color:var(--input, #444);
+	color:var(--input, var(--text, #444));
 	border-color: var(--success, #19C55E)
 }
 .field.success::placeholder{
@@ -168,7 +168,7 @@ textarea.field{
 }
 
 .field.danger{
-	color:var(--input, #444);
+	color:var(--input, var(--text, #444));
 	border-color: var(--danger, #E97961)
 }
 .field.danger::placeholder{
@@ -291,8 +291,8 @@ input[type=checkbox].switch[disabled]:before{
 	cursor: pointer;
 	user-select: none;
 
-	border: 1px solid var(--input-border, #444);
-	color:var(--input, #444);
+	border: 1px solid var(--input-border, var(--input, var(--text, #444)));
+	color:var(--input, var(--text, #444));
 	background: var(--input-background, transparent);
 
 	transition: border-color 0.3s ease, background 0.3s ease;
@@ -309,7 +309,7 @@ input[type=checkbox].switch[disabled]:before{
     position: absolute;
     top: 0;
     right: 0;
-    border-left: 1px solid var(--input-border, #444);
+    border-left: 1px solid var(--input-border, var(--input, var(--text, #444)));
     width: 34px;
     height: 34px;
 
@@ -331,7 +331,7 @@ input[type=checkbox].switch[disabled]:before{
 	pointer-events: none;
 }
 .select--placeholder.selected{
-	color:var(--input, #444);
+	color:var(--input, var(--text, #444));
 }
 .select--list{
 	display: none;
@@ -346,7 +346,7 @@ input[type=checkbox].switch[disabled]:before{
     max-height: 157px;
     overflow: auto;
     z-index: 1;
-    background: var(--input-background, white);
+    background: var(--input-background, var(--background, white));
 }
 .select--list li{
 	margin-bottom: 0;

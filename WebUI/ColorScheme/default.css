@@ -2,18 +2,18 @@
 * Default color scheme
 */
 :root{
-	--text:#444; /* var(--text, #444) */
-	--background:white; /* var(--background, white) */
-	--text-color-with-bg:white; /* var(--text-color-with-bg, white) */
+	--text:               #444; /* var(--text, #444) */
+	--background:         white; /* var(--background, white) */
+	--text-color-with-bg: white; /* var(--text-color-with-bg, white) */
 
 
-	--general: #FF8100; /* var(--general, #FF8100) */
+	--general:       #FF8100; /* var(--general, #FF8100) */
 	--general-sub-1: #BF7830; /* var(--general-sub-1, #BF7830) */
 	--general-sub-2: #A65400; /* var(--general-sub-2, #A65400) */
 	--general-sub-3: #FFA040; /* var(--general-sub-3, #FFA040) */
 	--general-sub-4: #FFBA73; /* var(--general-sub-4, #FFBA73) */
 
-	--secondary: #057D9F; /* var(--secondary, #057D9F) */
+	--secondary:       #057D9F; /* var(--secondary, #057D9F) */
 	--secondary-sub-1: #216477; /* var(--secondary-sub-1, #216477) */
 	--secondary-sub-2: #025167; /* var(--secondary-sub-2, #025167) */
 	--secondary-sub-3: #39AECF; /* var(--secondary-sub-3, #39AECF) */
@@ -21,13 +21,13 @@
 
 
 
-	--qoute:var(--general-sub-4, #FFBA73); /* var(--qoute, var(--general-sub-4, #FFBA73)) */
-	--qoute-text:#333; /*var(--qoute-text, #333)*/
+	--qoute: var(--general-sub-4, #FFBA73); /* var(--qoute, var(--general-sub-4, #FFBA73)) */
+	--qoute-text: #333; /*var(--qoute-text, #333) */
 
-	--input: #444; /* var(--input, #444) */
-	--input-border: #444; /* var(--input-border, #444) */
-	--input-background:white; /* var(--input-background, transparent) */
-	--input-focus-background:#FFFFCC; /* var(--input-focus-background, #FFFFCC) */
+	--input: var(--text, #444); /* var(--input, var(--text, #444)) */
+	--input-border: var(--input, var(--text, #444)); /* var(--input-border, var(--input, var(--text, #444))) */
+	--input-background: var(--background, white); /* var(--input-background, var(--background, white)) */
+	--input-focus-background: #FFFFCC; /* var(--input-focus-background, #FFFFCC) */
 	--input-placeholder: #888; /* var(--input-placeholder, #888) */
 
 	--progress-bar-background: #ccc; /* var(--progress-bar-background, #ccc) */
@@ -47,15 +47,15 @@
 	--popup-footer-text: black; /* var(--popup-footer-text, black) */
 	--popup-footer-background: #ccc; /* var(--popup-footer-background, #ccc) */
 
-	--tooltip-background:#444; /* var(--tooltip-background, #444) */
-	--tooltip-text:white; /* var(--tooltip-text, white) */
+	--tooltip-background: #444; /* var(--tooltip-background, #444) */
+	--tooltip-text: white; /* var(--tooltip-text, white) */
 
 	--dropdown-text: var(--text, #444); /* var(--dropdown-text, var(--text, #444)) */
 	--dropdown-background: var(--background, white); /* var(--dropdown-background, var(--background, white)) */
 	--dropdown-border: var(--dropdown-text, var(--text, #444)); /* var(--dropdown-border, var(--dropdown-text, var(--text, #444))) */
 	
-	--dropdown-hover-background:var(--general-sub-3, #FFA040); /* var(--dropdown-hover-background, var(--general-sub-3, #FFA040)) */
-	--dropdown-hover-text:var(--text-color-with-bg, white); /* var(--dropdown-hover-text, var(--text-color-with-bg, white)) */
+	--dropdown-hover-background: var(--general-sub-3, #FFA040); /* var(--dropdown-hover-background, var(--general-sub-3, #FFA040)) */
+	--dropdown-hover-text: var(--text-color-with-bg, white); /* var(--dropdown-hover-text, var(--text-color-with-bg, white)) */
 
 	/* Utilits */
 	--muted:gray; /* var(--muted, gray) */
