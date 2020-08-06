@@ -2,10 +2,15 @@
 * Cold color scheme
 */
 :root{
-	--general:#02B9DB; /* var(--general, #FF8100) */
-	--general-sub-3:#3DD1ED; /* var(--general-sub-3, #FFA040) */
-	--general-sub-4:#6CD9ED;
+	--general:       #02B9DB;
+	--general-sub-1: #2A91A4;
+	--general-sub-2: #01788E;
+	--general-sub-3: #3DD1ED;
+	--general-sub-4: #6CD9ED;
 
-	--secondary:#00E833; /* var(--secondary, #057D9F) */
-	--secondary-sub-3:#3DF465;
+	--secondary:       #00E833;
+	--secondary-sub-1: #2CAE48;
+	--secondary-sub-2: #009721;
+	--secondary-sub-3: #3DF465;
+	--secondary-sub-4: #6EF38B;
 }
