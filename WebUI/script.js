@@ -602,22 +602,58 @@ class ToolTip{
 	}
 
 	__initDefEvents(){
-		this.__rootEl.addEventListener("mouseover", function(){this.tooltip.show()});
-		this.__rootEl.addEventListener("mouseout", function(){this.tooltip.hide()});
+		this.__rootEl.addEventListener("mouseover", function(){
+			this.tooltip.show()
+		});
+		this.__rootEl.addEventListener("mouseout", function(e){
+			if(!this.contains(e.relatedTarget))
+				this.tooltip.hide()
+		});
+	}
+
+
+	get top(){
+		return this.__top || 0;
+	}
+	get left(){
+		return this.__left || 0;
+	}
+
+	set top(value){
+		this.__top = value;
+		this.__el.style.top = value + "px";
+	}
+	set left(value){
+		this.__left = value;
+		this.__el.style.left = value + "px";
 	}
 
 	show(){
-		this.__el.style.top = (this.__rootEl.offsetTop + (
-			this.__dir == "top" ? -ToolTip.MARGIN : 
-			this.__dir == "bottom" ? ToolTip.MARGIN + this.__rootEl.offsetHeight :
-			this.__rootEl.offsetHeight / 2
-		)) + "px";
+		if(this.__opened) return;
+		clearTimeout(this.__timeout);
 
-		this.__el.style.left = (this.__rootEl.offsetLeft + (
-			this.__dir == "left" ? -ToolTip.MARGIN : 
-			this.__dir == "right" ? ToolTip.MARGIN + this.__rootEl.offsetWidth :
+		this.__opened = true;
+		
+		this.top = (this.__rootEl.offsetTop + (
+			this.__dir == "top" ? 0 : 
+			this.__dir == "bottom" ? this.__rootEl.offsetHeight :
+			this.__rootEl.offsetHeight / 2
+		));
+
+		this.left = (this.__rootEl.offsetLeft + (
+			this.__dir == "left" ? 0 : 
+			this.__dir == "right" ? this.__rootEl.offsetWidth :
 			this.__rootEl.offsetWidth / 2
-		)) + "px";
+		));
+
+		setTimeout((function(){
+			if(this.__dir == "top" || this.__dir == "bottom")
+				this.top += (this.__dir == "top" ? -ToolTip.MARGIN : ToolTip.MARGIN);
+			else
+				this.left += (this.__dir == "left" ? -ToolTip.MARGIN : ToolTip.MARGIN);
+
+			this.__el.style.opacity = 1;
+		}).bind(this), 1);
 
 		document.body.appendChild(this.__el);
 
@@ -625,8 +661,23 @@ class ToolTip{
 	}
 
 	hide(){
+		if(!this.__opened) return;
+
+		this.__opened = false;
+
 		this.__el.style.width = null;
-		document.body.removeChild(this.__el);
+		setTimeout((function(){
+			if(this.__dir == "top" || this.__dir == "bottom")
+				this.top -= (this.__dir == "top" ? -ToolTip.MARGIN : ToolTip.MARGIN);
+			else
+				this.left -= (this.__dir == "left" ? -ToolTip.MARGIN : ToolTip.MARGIN);
+
+			this.__el.style.opacity = 0;
+		}).bind(this), 1);
+		this.__timeout = setTimeout((function(){
+			document.body.removeChild(this);
+		}).bind(this.__el), 300);
+		this.__el.style.opacity = 0;
 	}
 
 	static checkDir(dir){
