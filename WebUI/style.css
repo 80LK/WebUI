@@ -1194,31 +1194,39 @@ body.popup--open{ overflow: hidden; }
 }
 
 .btn .btn--wave{
+	--radius:300px;
+
 	position: absolute;
 	border-radius: 50%;
 	display: block;
 	transform: translate(-50%, -50%);
-	animation: button-wave 1.2s ease infinite;
 	pointer-events: none;
+
+	width: var(--radius);
+	height: var(--radius);
+	opacity: 1;
+	animation: button-wave 1s ease;
 
 	background: rgba(255, 255, 255, 0.4);
 }
 .btn.wave-dark .btn--wave{
 	background: rgba(0, 0, 0, 0.2);
 }
+.btn .btn--wave.btn--wave--hidding{
+	opacity: 0;
+	transition: opacity .5s ease;
+}
 
 @keyframes button-wave{
 	0%{
 		width: 0;
 		height: 0;
-	}
-	50%{
-		opacity: .5;
+		opacity: 0;
 	}
 	100%{
-		width: 300px;
-		height: 300px;
-		opacity: 0;
+		width: var(--radius);
+		height: var(--radius);
+		opacity: 1;
 	}
 }
 /* Buttons Group */
