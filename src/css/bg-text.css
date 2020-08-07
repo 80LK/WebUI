@@ -1,0 +1,10 @@
+/* Text BG */
+.bg{
+	background:var(--general, #FF8100);
+	color:var(--text-color-with-bg, white);
+}
+.bg.secondary{ background:var(--secondary, #057D9F); }
+.bg.success{ background: var(--success, #19C55E); }
+.bg.info{ background: var(--info, #62B7FF); }
+.bg.warning{ background: var(--warning, #D2A052); }
+.bg.danger{ background: var(--danger, #E97961); }

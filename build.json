@@ -1,0 +1,12 @@
+{
+	"buldDirs":[{
+		"build":true,
+		"buildFolder":"src/css",
+		"targeetBuild":"WebUI/style.css",
+		"comment":{ "fileName":"/* %comm% */" }
+	},{
+		"build":true,
+		"buildFolder":"src/js",
+		"targeetBuild":"WebUI/script.js"
+	}]
+}

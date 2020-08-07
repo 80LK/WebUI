@@ -1,0 +1,259 @@
+/* Preloader */
+body.loading{ overflow: hidden; }
+#preloader{
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+#preloader .cubics{
+	position: relative;
+	width: 55px;
+	height: 55px;
+}
+
+#preloader .cubics span{
+    display: block;
+    height: 25px;
+    width: 25px;
+    background: var(--general, #FF8100);
+    position: absolute;
+}
+
+#preloader .cubics span:nth-child(1){
+	top: 0;
+	left: 0;
+	animation: preloader-cubics-cubic-1 4s ease infinite;
+}
+#preloader .cubics span:nth-child(2){
+	background: var(--secondary, #057D9F);
+	top: 0;
+    left: 30px;
+    animation: preloader-cubics-cubic-2 4s ease infinite;
+}
+#preloader .cubics span:nth-child(3){
+	top: 30px;
+	left: 30px;
+    animation: preloader-cubics-cubic-3 4s ease infinite;
+}
+#preloader .cubics span:nth-child(4){
+	background: var(--secondary, #057D9F);
+	top: 30px;
+	left: 0;
+    animation: preloader-cubics-cubic-4 4s ease infinite;
+}
+
+@keyframes preloader-cubics-cubic-1{
+	0%{
+		top: 0;
+		left: 0;
+	}
+	25%{
+		top: 0;
+    	left: 30px;	
+	}
+	50%{
+		top: 30px;
+		left: 30px;
+	}
+	75%{
+		top: 30px;
+		left: 0;
+	}
+	100%{
+		top: 0;
+		left: 0;
+	}
+}
+@keyframes preloader-cubics-cubic-2{
+	75%{
+		top: 0;
+		left: 0;
+	}
+	0%{
+		top: 0;
+    	left: 30px;	
+	}
+	25%{
+		top: 30px;
+		left: 30px;
+	}
+	50%{
+		top: 30px;
+		left: 0;
+	}
+	100%{
+		top: 0;
+    	left: 30px;	
+	}
+}
+@keyframes preloader-cubics-cubic-3{
+	50%{
+		top: 0;
+		left: 0;
+	}
+	75%{
+		top: 0;
+    	left: 30px;	
+	}
+	0%{
+		top: 30px;
+		left: 30px;
+	}
+	25%{
+		top: 30px;
+		left: 0;
+	}
+	100%{
+		top: 30px;
+		left: 30px;
+	}
+}
+@keyframes preloader-cubics-cubic-4{
+	25%{
+		top: 0;
+		left: 0;
+	}
+	50%{
+		top: 0;
+    	left: 30px;	
+	}
+	75%{
+		top: 30px;
+		left: 30px;
+	}
+	0%{
+		top: 30px;
+		left: 0;
+	}
+	100%{
+		top: 30px;
+		left: 0;
+	}
+}
+
+#preloader .recatngles span{
+    display: inline-block;
+    height: 20px;
+    width: 10px;
+    background: var(--general, #FF8100);
+}
+
+#preloader .recatngles span:nth-child(1){
+	animation: preloader-recatngles-rectangle-1 2s linear infinite;
+}
+#preloader .recatngles span:nth-child(2){
+    animation: preloader-recatngles-rectangle-2 2s linear infinite;
+}
+#preloader .recatngles span:nth-child(3){
+    animation: preloader-recatngles-rectangle-3 2s linear infinite;
+}
+#preloader .recatngles span:nth-child(4){
+    animation: preloader-recatngles-rectangle-4 2s linear infinite;
+}
+
+@keyframes preloader-recatngles-rectangle-1{
+	0%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	20%{
+		height: 30px;
+	    width: 15px;
+	    background: var(--secondary, #057D9F);
+	}
+	40%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	100%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+}
+@keyframes preloader-recatngles-rectangle-2{
+	0%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	20%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	40%{
+		height: 30px;
+	    width: 15px;
+	    background: var(--secondary, #057D9F);
+	}
+	60%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	100%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+}
+@keyframes preloader-recatngles-rectangle-3{
+	0%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	40%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	60%{
+		height: 30px;
+	    width: 15px;
+	    background: var(--secondary, #057D9F);
+	}
+	80%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	100%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+}
+@keyframes preloader-recatngles-rectangle-4{
+	0%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	60%{
+		height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+	80%{
+		height: 30px;
+	    width: 15px;
+	    background: var(--secondary, #057D9F);
+	}
+	100%{
+		 height: 20px;
+	    width: 10px;
+	    background: var(--general, #FF8100);
+	}
+}

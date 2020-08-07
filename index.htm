@@ -32,18 +32,6 @@
 		</label>
 
 		<div id="ThemeSelector"></div>
-		<script type="text/javascript">
-			new Selector("ThemeSelector", {
-				selected:["default", "cold"].indexOf(ColorScheme.scheme),
-				items:[
-					{title:"Default", value:"default"},
-					{title:"Cold", value:"cold"},
-				],
-				onchange:function(){
-					ColorScheme.setScheme(this.value);
-				}
-			});
-		</script>
 	</header>
 
 	<main class="container">
@@ -120,12 +108,12 @@
 		<div>
 			<h2 class="muted">Buttons</h2>
 			<div class="mb-2">
-				<a class="btn large">Default button</a>
-				<button class="btn large secondary dark-wave">Secondary button</button>
-				<button class="btn large success">Success button</button>
-				<button class="btn large info">Info button</button>
-				<button class="btn large warning">Warning button</button>
-				<button class="btn large danger">Danger button</button>
+				<a class="btn large wave-dark">Default button</a>
+				<button class="btn large wave-dark secondary">Secondary button</button>
+				<button class="btn large wave-dark success">Success button</button>
+				<button class="btn large wave-dark info">Info button</button>
+				<button class="btn large wave-dark warning">Warning button</button>
+				<button class="btn large wave-dark danger">Danger button</button>
 			</div>
 			<div class="mb-4">
 				<a class="btn">Default button</a>
@@ -138,12 +126,12 @@
 
 			<h2 class="muted">Soft buttons</h2>
 			<div class="mb-2">
-				<a class="btn large soft">Default button</a>
-				<button class="btn large soft secondary dark-wave">Secondary button</button>
-				<button class="btn large soft success">Success button</button>
-				<button class="btn large soft info">Info button</button>
-				<button class="btn large soft warning">Warning button</button>
-				<button class="btn large soft danger">Danger button</button>
+				<a class="btn large wave-dark soft">Default button</a>
+				<button class="btn large wave-dark soft secondary dark-wave">Secondary button</button>
+				<button class="btn large wave-dark soft success">Success button</button>
+				<button class="btn large wave-dark soft info">Info button</button>
+				<button class="btn large wave-dark soft warning">Warning button</button>
+				<button class="btn large wave-dark soft danger">Danger button</button>
 			</div>
 			<div class="mb-4">
 				<a class="btn soft">Default button</a>
@@ -156,12 +144,12 @@
 
 			<h2 class="muted">Ghost buttons</h2>
 			<div class="mb-2">
-				<a class="btn large ghost">Default button</a>
-				<button class="btn large ghost secondary dark-wave">Secondary button</button>
-				<button class="btn large ghost success">Success button</button>
-				<button class="btn large ghost info">Info button</button>
-				<button class="btn large ghost warning">Warning button</button>
-				<button class="btn large ghost danger">Danger button</button>
+				<a class="btn large wave-dark ghost">Default button</a>
+				<button class="btn large wave-dark ghost secondary dark-wave">Secondary button</button>
+				<button class="btn large wave-dark ghost success">Success button</button>
+				<button class="btn large wave-dark ghost info">Info button</button>
+				<button class="btn large wave-dark ghost warning">Warning button</button>
+				<button class="btn large wave-dark ghost danger">Danger button</button>
 			</div>
 			<div class="mb-4">
 				<a class="btn ghost">Default button</a>
@@ -267,47 +255,16 @@
 				<div class="col-4">
 					<h4 class="muted">Selector</h4>
 					<div id="selector"></div>
-					<script type="text/javascript">
-						var selector = new Selector("selector", {
-							placeholder:"Select item...",
-							items:[
-								{title:"Item 1",value:1},
-								{title:"Item 2",value:2},
-								{title:"Item 3",value:3},
-								{title:"Item 4",value:4},
-							]
-						});
-					</script>
+					
 				</div>
 				<div class="col-4">
 					<h4 class="muted">Multi-Selector</h4>
 					<div id="multi-selector"></div>
 					<span class="muted small">Hold SHIFT to select multiple items.</span>
-					<script type="text/javascript">
-						var multiselector = new Selector("multi-selector", {
-							placeholder:"Select items...",
-							multi:true,
-							items:[
-								{title:"Category"},
-								{title:"Item 1",value:1},
-								{title:"Item 2",value:2},
-								{title:"Item 3",value:3},
-								{title:"Item 4",value:4},
-							]
-						});
-					</script>
 				</div>
 				<div class="col-4">
 					<h4 class="muted">Disabled Selector</h4>
 					<div id="disabled-selector" disabled></div>
-					<script type="text/javascript">
-						var multiselector = new Selector("disabled-selector", {
-							selected:0,
-							items:[
-								{title:"Item 5",value:5},
-							]
-						});
-					</script>
 				</div>
 			</div>
 			<h3 class="muted">Group input</h3>
@@ -339,32 +296,10 @@
 					<div class="input-group">
 						<i class="field large fas fa-list"></i>
 						<div class="large" id="large-selector-group"></div>
-						<script type="text/javascript">
-							new Selector("large-selector-group", {
-								placeholder:"Select item...",
-								items:[
-									{title:"Item 1",value:1},
-									{title:"Item 2",value:2},
-									{title:"Item 3",value:3},
-									{title:"Item 4",value:4},
-								]
-							});
-						</script>
 					</div>
 					<div class="input-group">
 						<i class="field fas fa-list"></i>
 						<div id="selector-group"></div>
-						<script type="text/javascript">
-							new Selector("selector-group", {
-								placeholder:"Select item...",
-								items:[
-									{title:"Item 1",value:1},
-									{title:"Item 2",value:2},
-									{title:"Item 3",value:3},
-									{title:"Item 4",value:4},
-								]
-							});
-						</script>
 					</div>
 				</div>
 			</div>
@@ -408,12 +343,6 @@
 					<div class="progress-bar secondary" data-title="Secondary" data-value="39"></div>
 
 					<div id="progress-bar" class="info"></div>
-					<script type="text/javascript">
-						progress_bar = new ProgressBar("progress-bar", {
-							label:"Info",
-							value:48
-						});
-					</script>
 
 					<div class="progress-bar warning" id="warningProgressBar" data-title="Warning" data-value="87"></div>
 				</div>
@@ -469,8 +398,8 @@
 			<h2 class="muted">Popups</h2>
 			<div class="row">
 				<div class='col-12'>
-					<button class="btn" onclick="SoftPopup.open()">Soft Popup</button>
-					<button class="btn secondary" onclick="DefaultPopup.open()">Default Popup</button>
+					<button class="btn" onclick="DefaultPopup.open()">Default Popup</button>
+					<button class="btn soft secondary" onclick="SoftPopup.open()">Soft Popup</button>
 				</div>
 			</div>
 		</div>
@@ -510,8 +439,72 @@
 	</footer>
 </div>
 <script type="text/javascript">
+	//Theme
+	new Selector("ThemeSelector", {
+		selected:["default", "cold"].indexOf(ColorScheme.scheme),
+		items:[
+			{title:"Default", value:"default"},
+			{title:"Cold", value:"cold"},
+		],
+		onchange:function(){
+			ColorScheme.setScheme(this.value);
+		}
+	});
+	//Soft popup
 	var SoftPopup = new Popup("SoftPopup", {
 		title:"Soft Popup",
 		classes:["soft"]
+	});
+	//Selectors
+	var selector = new Selector("selector", {
+		placeholder:"Select item...",
+		items:[
+			{title:"Item 1",value:1},
+			{title:"Item 2",value:2},
+			{title:"Item 3",value:3},
+			{title:"Item 4",value:4},
+		]
+	});
+	var multiselector = new Selector("multi-selector", {
+		placeholder:"Select items...",
+		multi:true,
+		items:[
+			{title:"Category"},
+			{title:"Item 1",value:1},
+			{title:"Item 2",value:2},
+			{title:"Item 3",value:3},
+			{title:"Item 4",value:4},
+		]
+	});
+	var dismultiselector = new Selector("disabled-selector", {
+		selected:0,
+		items:[
+			{title:"Item 5",value:5},
+		]
+	});
+	//Input group
+	new Selector("large-selector-group", {
+		placeholder:"Select item...",
+		items:[
+			{title:"Item 1",value:1},
+			{title:"Item 2",value:2},
+			{title:"Item 3",value:3},
+			{title:"Item 4",value:4},
+		]
+	});
+	new Selector("selector-group", {
+		placeholder:"Select item...",
+		items:[
+			{title:"Item 1",value:1},
+			{title:"Item 2",value:2},
+			{title:"Item 3",value:3},
+			{title:"Item 4",value:4},
+		]
+	});
+
+	//Progress-bar
+	progress_bar = new ProgressBar("progress-bar", {
+		label:"Info",
+		value:48
 	});
 </script>

@@ -1,0 +1,17 @@
+/* Здесь должен быть FontAwesome */
+
+/* General */
+*{
+	font-family: Arial;
+	box-sizing: border-box;
+	/*vertical-align: middle;*/
+}
+
+body{
+	margin: 0;
+	padding:0;
+	font-size:16px;
+	color:var(--text, #444);
+	background:var(--background, white);
+	transition: background .3s ease, color .3s ease;
+}

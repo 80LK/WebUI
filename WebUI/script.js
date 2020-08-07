@@ -1,6 +1,11 @@
 /*
-*	
+	BUILD INFO:
+		Folder: src/js
+		Target: WebUI/script.js
+		Files: 10
 */
+
+///LoadEvent.js
 const LoadEvent = {
 	__handlers:[],
 	addHandler:function(handler, priority = 10){
@@ -15,8 +20,7 @@ const LoadEvent = {
 };
 LoadEvent.__init();
 
-
-//Wave buttons
+///btn-wave.js
 LoadEvent.addHandler(function(){
 	document.querySelectorAll(".btn").forEach(
 	el => el.addEventListener("click", function(e){
@@ -41,8 +45,7 @@ LoadEvent.addHandler(function(){
 	})
 });
 
-
-//Preloader
+///preloader.js
 LoadEvent.addHandler(()=>{
 	let preloader = document.getElementById("preloader");
 	if(preloader)
@@ -52,7 +55,7 @@ LoadEvent.addHandler(()=>{
 	document.body.classList.remove("loading");
 }, 9999)
 
-
+///selector.js
 class Selector{
 	static DEFAULT_TOOLTIP = "Hold <span class='badge'>SHIFT</span> to select multiple items.";
 	constructor(id, options = {}){
@@ -324,7 +327,7 @@ class Selector{
 }
 LoadEvent.addHandler(Selector.__init);
 
-
+///popup.js
 class Popup{
 	static __popupsContainer = null;
 	static __openedPopup = null;
@@ -410,6 +413,7 @@ class Popup{
 LoadEvent.addHandler(Popup.__initWindows)
 
 
+///progress-bar.js
 class ProgressBar{
 	constructor(bar, options = {}){
 		if(typeof bar === "string")
@@ -487,7 +491,7 @@ class ProgressBar{
 }
 LoadEvent.addHandler(ProgressBar.__init)
 
-
+///keyboard.js
 const Keyboard = {
 	__keys:{},
 	__init(){
@@ -509,7 +513,7 @@ const Keyboard = {
 }
 Keyboard.__init();
 
-
+///tooltip.js
 class ToolTip{
 	static MARGIN = 5;
 	static DIR = {
@@ -613,7 +617,7 @@ class ToolTip{
 }
 LoadEvent.addHandler(ToolTip.__init);
 
-
+///dropdown.js
 class Dropdown{
 	constructor(el){
 		if(typeof el == "string")
@@ -661,6 +665,7 @@ class Dropdown{
 }
 LoadEvent.addHandler(Dropdown.__init);
 
+///toast.js
 class Toast{
 	static __inited = false;
 	static __container = null;
@@ -768,7 +773,6 @@ class Toast{
 		clearTimeout(this.__timeout);
 		this.__el.remove();
 	}
-
 }
 LoadEvent.addHandler(Toast.__init);
 
@@ -811,3 +815,4 @@ class Notification extends Toast{
 		this.__setup(destroy, options.live);
 	}
 }
+

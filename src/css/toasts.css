@@ -1,0 +1,110 @@
+/* Toasts */
+.toasts--container{
+	position: fixed;
+	/*background: rgba(0,0,0,.4);*/
+
+	left:0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column-reverse;
+
+	pointer-events: none;
+}
+.toasts--container *{
+	pointer-events: auto;
+}
+.toast{
+	width: 350px;
+	font-size: 1rem; 
+	padding: .5em .8em;
+	margin: .5em;
+	border-radius: 1em;
+	position: relative;
+
+	color:var(--text-color-with-bg, white);
+	border:1px solid var(--general, #FF8100);
+	background: var(--general-sub-3, #FFA040);
+}
+.toast--title{
+	color:var(--text-color-with-bg, white);
+	/*font-weight: bold;*/
+}
+.toast .toast--close{
+	color:var(--text-color-with-bg, white);
+	position: absolute;
+	top: .3em;
+	right: .5em;
+	cursor: pointer;
+}
+
+.toast.danger{
+	border:1px solid var(--danger, #E97961);
+	background: var(--danger-hover, #F49C89);	
+}
+.toast.info{
+	border:1px solid var(--info, #62B7FF);
+	background: var(--info-hover, #89CAFF);	
+}
+.toast.success{
+	border:1px solid var(--success, #19C55E);
+	background: var(--success-hover, #4EE28A);	
+}
+.toast.warning{
+	border:1px solid var(--warning, #D2A052);
+	background: var(--warning-hover, #E9BF7E);	
+}
+.toast.secondary{
+	border:1px solid var(--secondary, #057D9F);
+	background: var(--secondary-sub-3, #39AECF);	
+}
+
+
+.notification{
+	width: 350px;
+	margin: .5em;
+	padding: .5em;
+
+	color: var(--text, #444);
+	border: 1px solid var(--text, #444);
+	background: var(--background, white);
+	box-shadow: 1px 1px 4px 0 var(--text, #444);
+}
+.notification header,
+.notification main,
+.notification footer{
+	position: relative;
+
+    padding-left: 2px;
+    padding-right: 2px;
+	padding-bottom: .5em;
+	margin-bottom: .5em;
+
+	border-bottom: 1px solid var(--text, #444);	
+}
+.notification header{
+    padding-right: 1em;
+}
+.notification header:last-child,
+.notification main:last-child,
+.notification footer:last-child{
+	border-bottom:0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.notification--close{
+	cursor: pointer;
+
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+.notification separator{
+	display: block;
+
+	padding-bottom: .5em;
+	margin-bottom: .5em;
+	margin-left: -2px;
+	margin-right: -2px;
+
+	border-bottom: 1px solid var(--text, #444);	
+}

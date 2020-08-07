@@ -1,0 +1,35 @@
+/* Utilites */
+.center{ text-align: center; }
+
+.upper{ text-transform: uppercase; }
+.lower{ text-transform: lowercase; }
+
+.bold{ font-weight: bold; }
+.bolder{ font-weight: bolder; }
+
+.muted{ color:var(--muted, gray) !important; }
+
+.general, .default,
+.primary{ color:var(--general, #FF8100); }
+.secondary{ color:var(--secondary, #057D9F); }
+.success{ color:var(--success, #19C55E); }
+.info{ color:var(--info, #62B7FF); }
+.warning{ color:var(--warning, #D2A052); }
+.danger{ color:var(--danger, #E97961); }
+
+.small{ font-size: .8em; }
+
+.large{ font-size: 1.2em; }
+
+.block{ display:block; }
+.inline{ display:inline; }
+.inline-block{ display:inline-block; }
+
+[hidden]{ display: none!important; }
+
+.m-0, .ml-0{ margin-left: 0   }
+.m-0, .mr-0{ margin-right: 0  }
+.m-0, .mt-0{ margin-top: 0    }
+.m-0, .mb-0{ margin-bottom: 0 }
+
+.soft{ border-radius:1rem; }

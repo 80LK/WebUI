@@ -1,0 +1,199 @@
+/* Buttons */
+.btn{
+	user-select: none;
+    text-decoration: none;
+    display: inline-block;
+	padding:6px 12px;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+	border:2px solid var(--general, #FF8100);
+    background: var(--general, #FF8100);
+    color: var(--text-color-with-bg, white);
+
+    transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.btn.large{
+	font-size: 1.3rem;
+	padding:8px 16px;
+}
+
+.btn:hover{
+    color: var(--text-color-with-bg, white);
+	border-color: var(--general-sub-3, #FFA040);
+	background: var(--general-sub-3, #FFA040);
+}
+
+.btn.secondary,
+.btn.success,
+.btn.info,
+.btn.warning,
+.btn.danger{
+	color: var(--text-color-with-bg, white);
+}
+
+.btn.secondary{
+	border-color: var(--secondary, #057D9F);
+	background: var(--secondary, #057D9F);
+}
+.btn.secondary:hover{
+	border-color: var(--secondary-sub-3, #39AECF);
+	background: var(--secondary-sub-3, #39AECF);
+}
+
+.btn.success{
+	border-color: var(--success, #19C55E);
+	background: var(--success, #19C55E);
+}
+.btn.success:hover{
+	border-color: var(--success-hover, #4EE28A);
+	background: var(--success-hover, #4EE28A);
+}
+
+.btn.info{
+	border-color: var(--info, #62B7FF);
+	background: var(--info, #62B7FF);
+}
+.btn.info:hover{
+	border-color: var(--info-hover, #89CAFF);
+	background: var(--info-hover, #89CAFF);
+}
+
+.btn.warning{
+	border-color: var(--warning, #D2A052);
+	background: var(--warning, #D2A052);
+}
+.btn.warning:hover{
+	border-color: var(--warning-hover, #E9BF7E);
+	background: var(--warning-hover, #E9BF7E);
+}
+
+.btn.danger{
+	border-color: var(--danger, #E97961);
+	background: var(--danger, #E97961);
+}
+.btn.danger:hover{
+	border-color: var(--danger-hover, #F49C89);
+	background: var(--danger-hover, #F49C89);
+}
+
+/* GHOST BUTTONS */
+.btn.ghost{
+	border-color: var(--general, #FF8100);
+	color:var(--general, #FF8100);
+	background: transparent;
+}
+
+.btn.ghost:hover{
+	color: var(--text-color-with-bg, white);
+	background: var(--general, #FF8100);
+}
+
+.btn.secondary.ghost{
+	border-color: var(--secondary, #057D9F);
+	color:var(--secondary, #057D9F);
+}
+.btn.secondary.ghost:hover{ 
+	background: var(--secondary, #057D9F);
+	color: var(--text-color-with-bg, white);
+}
+
+.btn.success.ghost{
+	border-color: var(--success, #19C55E);
+	color:var(--success, #19C55E);
+}
+.btn.success.ghost:hover{
+	background: var(--success, #19C55E);
+	color: var(--text-color-with-bg, white);
+}
+
+.btn.info.ghost{
+	border-color: var(--info, #62B7FF);
+	color:var(--info, #62B7FF);
+}
+.btn.info.ghost:hover{
+	background: var(--info, #62B7FF);
+	color: var(--text-color-with-bg, white);
+}
+
+.btn.warning.ghost{
+	border-color: var(--warning, #D2A052);
+	color:var(--warning, #D2A052);
+}
+.btn.warning.ghost:hover{
+	background: var(--warning, #D2A052);
+	color: var(--text-color-with-bg, white);
+}
+
+.btn.danger.ghost{
+	border-color: var(--danger, #E97961);
+	color:var(--danger, #E97961);
+}
+.btn.danger.ghost:hover{
+	background: var(--danger, #E97961);
+	color: var(--text-color-with-bg, white);
+}
+
+/* Button waves */
+.btn *{
+	pointer-events: none;
+}
+
+.btn .btn--wave{
+	position: absolute;
+	border-radius: 50%;
+	display: block;
+	transform: translate(-50%, -50%);
+	animation: button-wave 1.2s ease infinite;
+	pointer-events: none;
+
+	background: rgba(255, 255, 255, 0.4);
+}
+.btn.wave-dark .btn--wave{
+	background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes button-wave{
+	0%{
+		width: 0;
+		height: 0;
+	}
+	50%{
+		opacity: .5;
+	}
+	100%{
+		width: 300px;
+		height: 300px;
+		opacity: 0;
+	}
+}
+/* Buttons Group */
+.btn-group{
+	display: inline-flex;
+	margin-right: 10px;
+}
+.btn-group .btn{
+	display: block;
+	width: max-content;
+	margin-right:0;
+}
+
+.btn-group .btn.soft{
+	border-radius: 0;
+}
+.btn-group .btn.soft:first-child{
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+}
+.btn-group .btn.soft:last-child{
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}

@@ -1,0 +1,22 @@
+/* Badges */
+.badge{
+	font-size: .8em;
+	border-radius: .5em;
+	padding:.2em .5em;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+
+	color:var(--text-color-with-bg, white);
+	background: var(--general, #FF8100);
+	vertical-align: middle;
+}
+
+.badge.large{
+	font-size: 1em;
+}
+.badge.secondary{ background:var(--secondary, #057D9F); }
+.badge.success{ background: var(--success, #19C55E); }
+.badge.info{ background: var(--info, #62B7FF); }
+.badge.warning{ background: var(--warning, #D2A052); }
+.badge.danger{ background: var(--danger, #E97961); }
