@@ -234,8 +234,10 @@ i.field{
 }
 
 .field.large{
+	font-size: 1.2em;
 	height: 42px;
 }
+
 i.field.large{
 	width: 42px;
 }
@@ -368,6 +370,7 @@ input[type=checkbox].switch[disabled]:before{
     transition: border-color 0.3s ease, background 0.3s ease;
 }
 .select.large{
+	font-size:1.2em;
 	height: 42px;
 }
 .select.large:after{
@@ -446,10 +449,6 @@ input[type=checkbox].switch[disabled]:before{
 }
 .select[disabled] .select--placeholder{
 	color:var(--muted, gray);	
-}
-
-.field.large{
-	height: 42px;
 }
 
 /* Input Group*/
