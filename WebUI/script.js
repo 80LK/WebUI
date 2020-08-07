@@ -787,7 +787,14 @@ class Toast{
 		console.log(seconds);
 		this.destroy = this.destroy.bind(this);
 		closeEl.addEventListener("click", this.destroy);
-		this.__timeout = setTimeout(this.destroy, seconds * 1000);
+
+		seconds *= 1000;
+
+		setTimeout((function(){
+			this.classList.add("closed");
+		}).bind(this.__el), seconds-500);
+		this.__timeout = setTimeout(this.destroy, seconds);
+
 		Toast.__container.appendChild(this.__el);
 	}
 	destroy(){

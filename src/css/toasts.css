@@ -24,6 +24,8 @@
 	color:var(--text-color-with-bg, white);
 	border:1px solid var(--general, #FF8100);
 	background: var(--general-sub-3, #FFA040);
+
+	animation: toast-up .5s;
 }
 .toast--title{
 	color:var(--text-color-with-bg, white);
@@ -63,11 +65,14 @@
 	width: 350px;
 	margin: .5em;
 	padding: .5em;
+	position: relative;
 
 	color: var(--text, #444);
 	border: 1px solid var(--text, #444);
 	background: var(--background, white);
 	box-shadow: 1px 1px 4px 0 var(--text, #444);
+
+	animation: toast-up .5s;
 }
 .notification header,
 .notification main,
@@ -107,4 +112,30 @@
 	margin-right: -2px;
 
 	border-bottom: 1px solid var(--text, #444);	
+}
+
+.toast.closed,
+.notification.closed{
+	animation: toast-down .5s;
+}
+
+@keyframes toast-up{
+	0%{
+		opacity: 0;
+		top:-1rem;
+	}
+	100%{
+		opacity: 1;
+		top:0;
+	}
+}
+@keyframes toast-down{
+	0%{
+		opacity: 1;
+		top:0;
+	}
+	100%{
+		opacity: 0;
+		top:1rem;
+	}
 }
