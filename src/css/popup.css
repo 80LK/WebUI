@@ -23,9 +23,17 @@ body.popup--open{ overflow: hidden; }
 	color: var(--popup-text, var(--text, #444));
 	background: var(--popup-background, var(--background, white));
 	border:1px solid var(--popup-border, var(--popup-text, var(--text, #444)));
+
+	position: relative;
 }
 .popup.open{
 	display: block;
+}
+.popup.opened{
+	animation: popup-up .5s;
+}
+.popup.closed{
+	animation: popup-down .5s;
 }
 
 .popup header,
@@ -71,4 +79,25 @@ body.popup--open{ overflow: hidden; }
     right: 10px;
     top: 10px;
     cursor: pointer;
+}
+
+@keyframes popup-up{
+	0%{
+		top:-5rem;
+		opacity: 0;
+	}
+	100%{
+		top:0;
+		opacity: 1;
+	}
+}
+@keyframes popup-down{
+	0%{
+		top:0;
+		opacity: 1;
+	}
+	100%{
+		top:5rem;
+		opacity: 0;
+	}
 }

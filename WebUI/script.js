@@ -408,15 +408,30 @@ class Popup{
 	open(){
 		document.body.classList.add("popup--open");
 		this._el.classList.add("open");
+
 		if(Popup.__openedPopup)
 			Popup.__openedPopup._el.classList.remove("open");
+		else{
+			this._el.classList.add("opened");
+			setTimeout((function(){
+				this.classList.remove("opened")
+			}).bind(this._el), 300);
+		}
+
 
 		Popup.__openedPopup = this;
 	}
 
 	close(){
-		document.body.classList.remove("popup--open");
-		this._el.classList.remove("open");
+		// document.body.classList.remove("popup--open");
+		// this._el.classList.remove("open");
+		
+		this._el.classList.add("closed");
+
+		setTimeout((function(){
+			this._el.classList.remove("open", "closed")
+			document.body.classList.remove("popup--open");
+		}).bind(this), 300);
 		Popup.__openedPopup = null;
 	}
 
