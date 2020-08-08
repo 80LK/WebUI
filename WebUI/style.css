@@ -186,7 +186,7 @@ blockquote p {
 
 	border: 1px solid var(--input-border, var(--input, var(--text, #444)));
 	color:var(--input, var(--text, #444));
-	background: var(--input-background, transparent);
+	background: var(--input-background, var(--background, white));
 
 	transition: border-color 0.3s ease, background 0.3s ease;
 }
@@ -347,7 +347,7 @@ input[type=checkbox].switch[disabled]:before{
 
 	border: 1px solid var(--input-border, var(--input, var(--text, #444)));
 	color:var(--input, var(--text, #444));
-	background: var(--input-background, transparent);
+	background: var(--input-background, var(--background, white));
 
 	transition: border-color 0.3s ease, background 0.3s ease;
 }

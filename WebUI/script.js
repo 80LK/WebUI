@@ -69,9 +69,10 @@ LoadEvent.addHandler(function(){
 ///preloader.js
 LoadEvent.addHandler(()=>{
 	let preloader = document.getElementById("preloader");
-	if(preloader)
+	if(preloader){
 		preloader.remove();
-		setTimeout(preloader.remove.bind(preloader), 3000)
+		delete preloader;
+	}
 
 	document.body.classList.remove("loading");
 }, 9999)
